@@ -1,7 +1,6 @@
 "use client";
 
 import { useAuth } from "@/hooks/useAuth";
-import { Loading } from "@/components/ui/loading";
 import { useState, useEffect } from "react";
 import AdminDashboard from "@/components/Dashboard/admin/dashboard/Dashboard";
 import UserDashboard from "@/components/Dashboard/dashboard/Dashboard";
@@ -25,7 +24,7 @@ export default function DashboardPage() {
   }, []);
 
   if (isLoading) {
-    return  (
+    return (
       <div className="p-6">
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
@@ -41,7 +40,7 @@ export default function DashboardPage() {
   if (userRole === "admin") {
     return (
       <div className="p-6">
-        <AdminDashboard user={user} />
+        <AdminDashboard user={user ?? undefined} />
       </div>
     );
   }
@@ -49,7 +48,7 @@ export default function DashboardPage() {
   // Show user dashboard for regular users
   return (
     <div className="p-6">
-      <UserDashboard user={user} />
+      <UserDashboard user={user ?? undefined} />
     </div>
   );
 }
