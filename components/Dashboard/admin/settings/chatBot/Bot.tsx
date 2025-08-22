@@ -72,7 +72,7 @@ export const ChatBotSettings = () => {
 
   // Generate embed script for the chatbot
   const generateEmbedScript = (configId: string) => {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://harmless-flea-inviting.ngrok-free.app";
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://saaschatbotbackend.onrender.com";
     
     return `<!-- AI Chatbot Embed Script - Exact React Component -->
 <script 

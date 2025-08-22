@@ -82,7 +82,7 @@ export default function EmbedCodePage() {
 
   // Generate embed codes for different platforms
   const generateEmbedCodes = () => {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://harmless-flea-inviting.ngrok-free.app";
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://saaschatbotbackend.onrender.com";
     const configId = params.id;
     const companyName = chatbot?.companyName || "AI Chatbot";
     
@@ -464,12 +464,12 @@ class Chatbot extends Component {
   };
 
   const previewChatbot = () => {
-    const previewUrl = `${process.env.NEXT_PUBLIC_API_URL || 'https://harmless-flea-inviting.ngrok-free.app'}/embed/user-chatbot?configId=${params.id}`;
+    const previewUrl = `${process.env.NEXT_PUBLIC_API_URL || 'https://saaschatbotbackend.onrender.com'}/embed/user-chatbot?configId=${params.id}`;
     window.open(previewUrl, '_blank');
   };
 
   const customizeAppearance = () => {
-    const appearanceUrl = `${process.env.NEXT_PUBLIC_API_URL || 'https://harmless-flea-inviting.ngrok-free.app'}/embed/chatbot-appearance?configId=${params.id}`;
+    const appearanceUrl = `${process.env.NEXT_PUBLIC_API_URL || 'https://saaschatbotbackend.onrender.com'}/embed/chatbot-appearance?configId=${params.id}`;
     window.open(appearanceUrl, '_blank');
   };
 

@@ -213,7 +213,7 @@ export const ListBot = () => {
   const generateEmbedScript = (configId: string) => {
     const baseUrl =
       process.env.NEXT_PUBLIC_API_URL ||
-      "https://harmless-flea-inviting.ngrok-free.app";
+      "https://saaschatbotbackend.onrender.com";
 
     // Advanced obfuscation - use hex encoding which is HTML-safe
     const generateHash = (value: string) => {
@@ -260,7 +260,7 @@ export const ListBot = () => {
   const previewChatbotWithAppearance = (configId: string) => {
     const previewUrl = `${
       process.env.NEXT_PUBLIC_API_URL ||
-      "https://harmless-flea-inviting.ngrok-free.app"
+      "https://saaschatbotbackend.onrender.com"
     }/embed/chatbot-appearance?configId=${configId}`;
     window.open(previewUrl, "_blank");
   };
