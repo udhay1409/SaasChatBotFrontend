@@ -82,7 +82,7 @@ function GoogleCallbackInner() {
 
 export default function GoogleCallback() {
   return (
-    <Suspense fallback={<div className="p-6 text-center">Loading authentication...</div>}>
+    <Suspense fallback={<div className="p-6 text-center"> <AIBotLoading /></div>}>
       <GoogleCallbackInner />
     </Suspense>
   );
